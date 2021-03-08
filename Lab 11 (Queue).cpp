@@ -7,13 +7,13 @@ struct Queue {
 Queue* FillQueue(int N, Queue *&first) {
 	Queue* p = new Queue;
 	char el;
-	cout << "Ââåäèòå 1 ýëåìåíò: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 	cin >> el;
 	p->data = el;
 	first = p;
 	for (int i = 2; i <= N; i++) {
 		Queue* q = new Queue;
-		cout << "Ââåäèòå " << i << " ýëåìåíò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		cin >> el;
 		q->data = el;
 		p->next = q;
@@ -36,11 +36,11 @@ void AddElement(int size, Queue *&first) {
 	Queue* p = first;
 	while ((N > size) || (N < 1)) {
 		if ((N > size) || (N < 1)) {
-			cout << "Ââåäèòå íîìåð ýëåìåíòà: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 		}
 		cin >> N;
 	}
-	cout << "Ââåäèòå ýëåìåíòà êîòîðûé õîòèòå äîáàâèòü: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ: ";
 	cin >> key;
 	for (int i = 2; i < N; i++) {
 		p = p->next;
@@ -66,20 +66,20 @@ int main()
 	Queue* first;
 	while (size < 0) {
 		if (size < 0) {
-			cout << "Ââåäè ðàçìåð î÷åðåäè: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¾Ñ‡ÐµÑ€ÐµÐ´Ð¸: ";
 		}
 		cin >> size;
 	}
 	cout << endl;
 	if (size == 0) {
-		cout << "Î÷åðåäü ïóñòà!\n";
+		cout << "ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð¿ÑƒÑÑ‚Ð°!\n";
 	}
 	else {
 		FillQueue(size, first);
-		cout << "\nÎ÷åðåäü:\n";
+		cout << "\nÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ:\n";
 		PrintQueue(first);
 		AddElement(size, first);
-		cout << "\nÎ÷åðåäü:\n";
+		cout << "\nÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ:\n";
 		PrintQueue(first);		
 	}
 	system("pause");
