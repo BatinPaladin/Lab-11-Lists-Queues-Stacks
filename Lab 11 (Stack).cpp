@@ -9,11 +9,11 @@ void* FillStack(int N, Stack*& top)
 	Stack* p = new Stack;
 	double el=-1;
 	top = nullptr;
-	cout << "\nÂâåäèòå 1 ýëåìåíò: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 	do {
 		cin >> el;
 		if (el==0) {
-			cout << "Ââåäèòå 1 ýëåìåíò: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		}
 	} while (el == 0);
 	p->data = el;
@@ -21,12 +21,12 @@ void* FillStack(int N, Stack*& top)
 	top = p;
 	for (int i = 2; i <= N; i++) {
 		Stack* k = new Stack;
-		cout << "Ââåäèòå " << i << " ýëåìåíò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		do {
 			cin >> el;
 			if (el == 0)
 			{
-				cout << "Ââåäèòå " << i << " ýëåìåíò: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 			}
 		} while (el == 0);
 		k->data = el;
@@ -90,23 +90,23 @@ int main()
 	system("chcp 1251");
 	int size = -1;
 	Stack* stack = new Stack;
-	cout << "Ââåäèòå ðàçìåð ñòåêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ‚ÐµÐºÐ°: ";
 	while (size < 0) {
 		cin >> size;
 		if (size < 0) {
-			cout << "Ââåäèòå ðàçìåð ñòåêà: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ‚ÐµÐºÐ°: ";
 		}
 	}
 	if (size == 0) {
-		cout << "\nÑòåê ïóñò!\n";
+		cout << "\nÐ¡Ñ‚ÐµÐº Ð¿ÑƒÑÑ‚!\n";
 	}
 	else {
 		FillStack(size,stack);
-		cout << "\nÑòåê: \n";
+		cout << "\nÐ¡Ñ‚ÐµÐº: \n";
 		PrintStack(stack);
 		ZeroElement(stack,size);
 		DeleteElement(stack,size);
-		cout << "\nÑòåê ïîñëå óäàëåíèÿ: \n";
+		cout << "\nÐ¡Ñ‚ÐµÐº Ð¿Ð¾ÑÐ»Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ: \n";
 		PrintStack(stack);
 	}
 	system("pause");
