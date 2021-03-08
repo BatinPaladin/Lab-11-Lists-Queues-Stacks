@@ -8,7 +8,7 @@ struct List {
 List* FillList(int N)
 {
 	List* first, * p = new List;
-	cout << "\nÂâåäèòå 1 ýëåìåíò: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 	cin >> p->data;
 	first = p;
 	p->next = nullptr;
@@ -17,7 +17,7 @@ List* FillList(int N)
 		List* l = p;
 		p->next = k;
 		p = p->next;
-		cout << "Ââåäèòå " << i << " ýëåìåíò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		cin >> p->data;
 		p->next = nullptr;
 		p->prev = l;
@@ -35,13 +35,13 @@ void PrintList(List*& first)
 };
 void AddElement(List*& first,  int size) {
 	int pos;
-	cout << "\nÂâåäèòå íîìåð ýëåìåíòà: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 	do {
 		cin >> pos;
 		if ((pos > size) || (pos < 1)) {
-			cout << "Ââåäèòå íîìåð ýëåìåíòà: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 		}
-	} while (pos > size || pos < 1); cout << "Ââåäèòå ýëåìåíò: ";
+	} while (pos > size || pos < 1); cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 	char el;
 	cin >> el;
 	List* p = new List; 
@@ -59,22 +59,22 @@ int main()
 {
 	system("chcp 1251");
 	int size = -1;
-	cout << "Ââåäèòå ðàçìåð ñïèñêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÐ¿Ð¸ÑÐºÐ°: ";
 	while (size < 0) {
 		cin >> size;
 		if (size < 0) {
-			cout << "Ââåäèòå ðàçìåð ñïèñêà: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÐ¿Ð¸ÑÐºÐ°: ";
 		}
 	}
 	if (size == 0) {
-		cout << "Ñïèñîê ïóñò!\n";
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n";
 	}
 	else {
 		List* list = FillList(size);
-		cout << "\nÑïèñîê: \n";
+		cout << "\nÐ¡Ð¿Ð¸ÑÐ¾Ðº: \n";
 		PrintList(list);
 		AddElement(list,size);
-		cout << "\nÑïèñîê ïîñëå äîáàâëåíèÿ: \n";
+		cout << "\nÐ¡Ð¿Ð¸ÑÐ¾Ðº Ð¿Ð¾ÑÐ»Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: \n";
 		PrintList(list);
 	}
 	system("pause");
