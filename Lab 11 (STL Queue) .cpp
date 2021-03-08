@@ -5,7 +5,7 @@ queue<char> Queue;
 void FillQueue(int N) {
 	char el;
 	for (int i = 1; i <= N; i++) {
-		cout << "Ââåäèòå " << i << " ýëåìåíò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		cin >> el;
 		Queue.push(el);
 	}
@@ -23,7 +23,7 @@ void AddElement(char *& arr ,int size) {
 	int N = -1;
 	while ((N < 1) || (N > size)) {
 		if ((N < 1) || (N > size)) {
-			cout << "\nÂâåäèòå íîìåð ýëåìåíòà: ";
+			cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 		}
 		cin >> N;
 	}
@@ -34,7 +34,7 @@ void AddElement(char *& arr ,int size) {
 	for (int i = 1; i < N; i++) {
 		Queue.push(arr[i]);
 	}
-	cout << "\nÂâåäèòå ýëåìåíò: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 	cin >> key;
 	Queue.push(key);
 	for (int i = N; i <= size; i++) {
@@ -47,21 +47,21 @@ int main()
 	int size = -1;
 	while (size < 0) {
 		if (size < 0) {
-			cout << "Ââåäèòå ðàçìåð î÷åðåäè: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¾Ñ‡ÐµÑ€ÐµÐ´Ð¸: ";
 			cin >> size;
 		}
 	}
 	cout << endl;
 	if (size == 0) {
-		cout << "Î÷åðåäü ïóñòà!\n";
+		cout << "ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð¿ÑƒÑÑ‚Ð°!\n";
 	}
 	else {
 		char* array = new char[size];
 		FillQueue(size);
-		cout << "\nÎ÷åðåäü:\n";
+		cout << "\nÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ:\n";
 		PrintQueue(Queue);
 		AddElement(array, size);
-		cout << "\nÎ÷åðåäü ïîñëå äîáàâëåíèÿ:\n";
+		cout << "\nÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð¿Ð¾ÑÐ»Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ:\n";
 		PrintQueue(Queue);
 		delete [] array;
 	}
