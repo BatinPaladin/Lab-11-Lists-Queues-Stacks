@@ -6,7 +6,7 @@ list <char> List;
 void FillList(int N) {
 	char el;
 	for (int i = 0; i < N; i++) {
-		cout << "Ââåäèòå " << i + 1 << " ýëåìåíò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		cin >> el;
 		List.push_back(el);
 	}
@@ -16,7 +16,7 @@ void AddElement(int size){
 	int N = -1;
 	while ((N < 1) || (N > size)) {
 		if ((N < 1) || (N > size)) {
-			cout << "\nÂâåäèòå íîìåð ýëåìåíòà: ";
+			cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 		}
 		cin >> N;
 	}
@@ -24,7 +24,7 @@ void AddElement(int size){
 	p = List.begin();
 	advance(p, N-1);
 	list <char> AddList;
-	cout << "Ââåäèòå ýëåìåíò: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 	cin >> key;
 	AddList.push_back(key);
 	List.insert(p, AddList.begin(), AddList.end());
@@ -35,21 +35,21 @@ int main()
 	int size = -1;
 	while (size < 0) {
 		if (size < 0) {
-			cout << "Ââåäèòå ðàçìåð ñïèñêà: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÐ¿Ð¸ÑÐºÐ°: ";
 		}
 		cin >> size;
 	}
 	cout << endl;
 	if (size == 0) {
-		cout << "Ñïèñîê ïóñò!\n";
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n";
 	}
 	else {
 		FillList(size);
-		cout << endl << "Ñïèñîê:\n";
+		cout << endl << "Ð¡Ð¿Ð¸ÑÐ¾Ðº:\n";
 		copy(List.begin(), List.end(), ostream_iterator<char>(cout, " "));
 		cout << endl;
 		AddElement(size);
-		cout << endl << "Ñïèñîê:\n";
+		cout << endl << "Ð¡Ð¿Ð¸ÑÐ¾Ðº:\n";
 		copy(List.begin(), List.end(), ostream_iterator<char>(cout, " "));
 		cout << endl;
 	}
