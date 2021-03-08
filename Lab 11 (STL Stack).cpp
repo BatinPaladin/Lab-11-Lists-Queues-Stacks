@@ -18,21 +18,21 @@ int main()
 	double el;
 	while (size < 0) {
 		if (size < 0) {
-			cout << "Ââåäèòå ðàçìåð ñòåêà: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ‚ÐµÐºÐ°: ";
 		}
 		cin >> size;
 	}
 	cout << endl;
 	if (size == 0) {
-		cout << "Ñòåê ïóñò!\n";
+		cout << "Ð¡Ñ‚ÐµÐº Ð¿ÑƒÑÑ‚!\n";
 	}
 	else {
 		for (int i = 0; i < size; i++) {
-			cout << "Ââåäèòå " << i + 1 << " ýëåìåíò: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i + 1 << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 			cin >> el;
 			Stack.push(el);
 		}
-		cout << "\nÑòåê:\n";
+		cout << "\nÐ¡Ñ‚ÐµÐº:\n";
 		PrintStack(Stack);
 		int N = Stack.size();
 		for (int i = 1; i <= N; i++) {
@@ -46,7 +46,7 @@ int main()
 			Stack.push(StackP.top());
 			StackP.pop();
 		}
-		cout << "\nÑòåê:\n";
+		cout << "\nÐ¡Ñ‚ÐµÐº:\n";
 		PrintStack(Stack);
 	}
 	system("pause");
