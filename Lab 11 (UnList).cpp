@@ -7,14 +7,14 @@ struct List {
 List* FillList(int N)
 {
 	List* first, * p = new List;
-	cout << "\nÂâåäèòå 1 ýëåìåíò: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 	cin >> p->data;
 	first = p;
 	for (int i = 2; i <= N; i++) {
 		List* k = new List;
 		p->next = k;
 		p = p->next;
-		cout << "Ââåäèòå " << i << " ýëåìåíò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		cin >> p->data;
 		p->next = nullptr;
 	}
@@ -49,18 +49,18 @@ int main()
 {
 	system("chcp 1251");
 	int size = -1;
-	cout << "Ââåäèòå ðàçìåð ñïèñêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÐ¿Ð¸ÑÐºÐ°: ";
 	while (size < 0) {
 		cin >> size;
 		if (size < 0) {
-			cout << "Ââåäèòå ðàçìåð ñïèñêà: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÐ¿Ð¸ÑÐºÐ°: ";
 		}
 	}
 	List* list = FillList(size);
-	cout << "\nÑïèñîê: \n";
+	cout << "\nÐ¡Ð¿Ð¸ÑÐ¾Ðº: \n";
 	PrintList(list);
 	DeleteElement(list);
-	cout << "\nÑïèñîê ïîñëå óäàëåíèÿ: \n";
+	cout << "\nÐ¡Ð¿Ð¸ÑÐ¾Ðº Ð¿Ð¾ÑÐ»Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ: \n";
 	PrintList(list);
 	system("pause");
 	return 0;
